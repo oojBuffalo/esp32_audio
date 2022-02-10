@@ -13,8 +13,8 @@ ADCSampler *adcSampler = NULL;
 I2SSampler *i2sSampler = NULL;
 
 // replace this with your machines IP Address
-#define ADC_SERVER_URL "http://192.168.1.72:5003/adc_samples"
-#define I2S_SERVER_URL "http://192.168.1.72:5003/i2s_samples"
+#define ADC_SERVER_URL "http://192.168.0.12:5003/adc_samples"
+#define I2S_SERVER_URL "http://192.168.0.12:5003/i2s_samples"
 
 // i2s config for using the internal ADC
 i2s_config_t adcI2SConfig = {
@@ -118,8 +118,8 @@ void setup()
   // indicator LED
   pinMode(2, OUTPUT);
   // setup the HTTP Client
-  wifiClientADC = new WiFiClient();
-  httpClientADC = new HTTPClient();
+  //wifiClientADC = new WiFiClient();
+  //httpClientADC = new HTTPClient();
 
   wifiClientI2S = new WiFiClient();
   httpClientI2S = new HTTPClient();
